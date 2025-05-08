@@ -1,11 +1,11 @@
-def is_year_leap(mounth):
-    if mounth % 4 == 0:
-        return 'True'
+def is_year_leap(year):
+    if year % 4 == 0:
+        return True
     else:
-        return 'False'
+        return False
 
 
-mounth = int(input("Введите год:"))
-result = is_year_leap(mounth)
+year = int(input("Введите год:"))
+result = is_year_leap(year)
 
-print(f"Год {mounth}: {result}")
+print(f"Год {year}: {result}")
