@@ -8,8 +8,8 @@ driver = webdriver.Chrome()
 
 driver.get("https://bonigarcia.dev/selenium-webdriver-java/loading-images.html")
 
-WebDriverWait(driver, 20).until(EC.presence_of_all_elements_located((By.CSS_SELECTOR, "#award")))
+WebDriverWait(driver, 20).until(EC.text_to_be_present_in_element((By.CSS_SELECTOR, "#text"), "Done!"))
 
-src = driver.find_element(By.CSS_SELECTOR, '#award').get_attribute("scr")
+src = driver.find_element(By.ID, 'award').get_attribute("src")
 
 print(src)
